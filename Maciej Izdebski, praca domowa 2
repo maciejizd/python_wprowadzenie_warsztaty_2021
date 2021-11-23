@@ -1,0 +1,44 @@
+
+# Zadanie 1
+
+tekst = input("Napisz dowolny tekst: ")
+lista = []
+x = 0
+while x<len(tekst):
+    if tekst[x] not in lista:
+        lista.append(tekst[x])
+    x+=1
+print(*lista, sep = "\n")
+
+
+# Zadanie 2
+
+import random
+wylosowana = str(random.randint(1, 10))
+print(wylosowana)
+x = 0
+odpowiedz = ""
+while odpowiedz != wylosowana:
+    odpowiedz = input("Podaj liczbę z przedziału 1-10: ")
+    x += 1
+    if odpowiedz == wylosowana:
+        print("Brawo! Potrzebowałeś ", x, "prób!")
+        
+
+#Zadanie 3
+
+kontynenty = {
+    "Afryka" : "59",
+    "Ameryka Południowa" : "14",
+    "Ameryka Północna" : "22",
+    "Europa" : "46",
+    "Azja" : "48",
+    "Australia i Oceania" : "14",
+    "Antarktyda" : "0"
+}
+
+pytanie = input("Napisz nazwę kontynentu, o którym chcesz się dowiedzieć ile ma państw: ")
+
+
+opis = f"Cześć! Ten kontynent ma państw {kontynenty[pytanie]}"
+print(opis)
